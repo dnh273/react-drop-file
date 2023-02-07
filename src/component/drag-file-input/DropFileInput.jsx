@@ -59,7 +59,9 @@ const DropFileInput = (props) => {
                 alt=""
               />
               <div className="drop-file-preview__item__info">
-                <p>{item.name}</p>
+                <p>     {item.name.length > 40
+                    ? item.name.slice(0, 40) + " ..."
+                    : item.name}{" "}</p>
                 <p>{item.size}B</p>
               </div>
               <span
